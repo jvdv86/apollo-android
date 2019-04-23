@@ -272,7 +272,7 @@ final class ResponseHeaderRecord {
   Response response() {
     Request cacheRequest = new Request.Builder()
         .url(url)
-        .method(requestMethod, RequestBody.create(MediaType.parse("application/json; charset=utf-8"), ""))
+        .method("GET", null)
         .headers(varyHeaders)
         .build();
     return new Response.Builder()
